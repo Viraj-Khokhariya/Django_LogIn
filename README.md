@@ -1,2 +1,4 @@
-"# Django_LogIn_Register_Auth" 
-"# Django_LogIn_Register_Auth" 
+1. create database 
+2. change settings of database in setting.py
+3. makemigrations and migrate
+4. run server
