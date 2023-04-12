@@ -1,0 +1,12 @@
+<center>
+<h1>Home page</h1>
+
+FullName : {{request.session.Firstname}} {{request.session.Lastname}}
+<br>
+Email : {{request.session.Email}}
+<br>
+Contact : {{request.session.Contact}}
+
+
+<p>I know You Are Admin That's Why you Can See ALL DATA <a href="{% url 'showpage' %}"> See Now!</a></p>
+</center>

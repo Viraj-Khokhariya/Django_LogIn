@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>All Data</h2>
+  <p>These Data Come From DataBase in Table Form Bootstrap:</p>   
+  {% if key %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    {% for i in key %}
+    <tbody>
+      <tr>
+        <td>{{i.Firstname}}</td>
+        <td>{{i.Lastname}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Contact}}</td>
+        <td>{{i.Password}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+<center>
+<p>Go to the register page <a href="{% url 'register' %}"> Go Now!</a></p>
+<p>Go to the Log in page <a href="{% url 'login' %}"> Go Now!</a></p>
+</center>
+</body>
+</html>
